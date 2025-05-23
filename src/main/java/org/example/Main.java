@@ -45,5 +45,8 @@ public class Main {
         double promedio = sumaEdad / personas.size();
         System.out.println("La edad promedio es :"+ promedio);
     }
+    public static void PersonasPorGenero(ArrayList<Persona> personas, String genero){
+
+    }
 
 }
