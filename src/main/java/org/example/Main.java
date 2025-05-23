@@ -37,7 +37,13 @@ public class Main {
         scanner.close();
     }
     public static void PromedioEdad(ArrayList<Persona>){
-
+        int sumaEdad = 0;
+        for (Personas p : personas){
+            int edad = p.getEdad();
+            sumaEdad += edad;
+        }
+        double promedio = sumaEdad / personas.size();
+        System.out.println("La edad promedio es :"+ promedio);
     }
 
 }
