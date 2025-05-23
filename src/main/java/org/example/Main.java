@@ -46,7 +46,14 @@ public class Main {
         System.out.println("La edad promedio es :"+ promedio);
     }
     public static void PersonasPorGenero(ArrayList<Persona> personas, String genero){
+        int cantidad = 0;
+        for (Personas p : personas){
+            if (p.getGenero().equalsIgnoreCase(genero)){
+                cantidad ++;
+            }
 
+        }
+        System.out.println("Cantidad de personas con género " + genero + ": " + cantidad);
     }
 
 }
