@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
         CapturarDatos(Personas);
-
+        PromedioEdad(Personas);
 
 
 
@@ -36,4 +36,8 @@ public class Main {
         }
         scanner.close();
     }
+    public static void PromedioEdad(ArrayList<Persona>){
+
+    }
+
 }
