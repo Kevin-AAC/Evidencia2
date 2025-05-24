@@ -10,13 +10,13 @@ public class Main {
     public static void main(String[] args) {
         CapturarDatos(Personas);
         PromedioEdad(Personas);
-
-
+        System.out.println("Total personas con genero Masculino = " +  PersonasPorGenero(Personas,"masculino"));
+        System.out.println("Total personas con genero Femenino = " + PersonasPorGenero(Personas,"femenino"));
 
     }
     public static void CapturarDatos(ArrayList<Persona>personas) {
         int i = 1;
-        while (i <= 5) {
+        while (i <= 2) {
             System.out.println("Ingresa tu nombre: ");
             String nombre = scanner.nextLine();
             System.out.println("Ingresa tu apellido: ");
@@ -45,7 +45,7 @@ public class Main {
         double promedio = sumaEdad / personas.size();
         System.out.println("La edad promedio es :"+ promedio);
     }
-    public static void PersonasPorGenero(ArrayList<Persona> personas, String genero){
+    public static int PersonasPorGenero(ArrayList<Persona> personas, String genero){
         int cantidad = 0;
         for (Persona p : personas){
             if (p.getGenero().equalsIgnoreCase(genero)){
@@ -53,7 +53,7 @@ public class Main {
             }
 
         }
-        System.out.println("Cantidad de personas con género " + genero + ": " + cantidad);
+        return cantidad;
     }
 
 }
