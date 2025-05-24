@@ -6,6 +6,8 @@ public class Persona {
     private String genero;
     private int edad;
 
+    public Persona (String nombre, String apellido, String genero, int edad) {
 
+    }
 
 }
