@@ -16,7 +16,7 @@ public class Main {
     }
     public static void CapturarDatos(ArrayList<Persona>personas) {
         int i = 1;
-        while (i <= 2) {
+        while (i <= 5) {
             System.out.println("Ingresa tu nombre: ");
             String nombre = scanner.nextLine();
             System.out.println("Ingresa tu apellido: ");
