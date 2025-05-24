@@ -1,5 +1,4 @@
 package org.example;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,6 +11,7 @@ public class Main {
         PromedioEdad(Personas);
         System.out.println("Total personas con genero Masculino = " +  PersonasPorGenero(Personas,"masculino"));
         System.out.println("Total personas con genero Femenino = " + PersonasPorGenero(Personas,"femenino"));
+        System.out.println("La edad promedio es : " + PromedioEdad(Personas));
 
     }
     public static void CapturarDatos(ArrayList<Persona>personas) {
@@ -36,14 +36,12 @@ public class Main {
         }
         scanner.close();
     }
-    public static void PromedioEdad(ArrayList<Persona>personas) {
+    public static double PromedioEdad(ArrayList<Persona>personas) {
         int sumaEdad = 0;
         for (Persona p : personas){
-            int edad = p.getEdad();
-            sumaEdad += edad;
+            sumaEdad += p.getEdad();
         }
-        double promedio = sumaEdad / personas.size();
-        System.out.println("La edad promedio es :"+ promedio);
+        return (double) sumaEdad / personas.size();
     }
     public static int PersonasPorGenero(ArrayList<Persona> personas, String genero){
         int cantidad = 0;
