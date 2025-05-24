@@ -14,7 +14,7 @@ public class Main {
 
 
     }
-    public static void CapturarDatos(ArrayList<Persona>){
+    public static void CapturarDatos(ArrayList<Persona>personas) {
         int i = 1;
         while (i <= 5) {
             System.out.println("Ingresa tu nombre: ");
@@ -36,9 +36,9 @@ public class Main {
         }
         scanner.close();
     }
-    public static void PromedioEdad(ArrayList<Persona>){
+    public static void PromedioEdad(ArrayList<Persona>personas) {
         int sumaEdad = 0;
-        for (Personas p : personas){
+        for (Persona p : personas){
             int edad = p.getEdad();
             sumaEdad += edad;
         }
@@ -47,7 +47,7 @@ public class Main {
     }
     public static void PersonasPorGenero(ArrayList<Persona> personas, String genero){
         int cantidad = 0;
-        for (Personas p : personas){
+        for (Persona p : personas){
             if (p.getGenero().equalsIgnoreCase(genero)){
                 cantidad ++;
             }
