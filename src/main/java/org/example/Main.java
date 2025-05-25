@@ -1,7 +1,6 @@
 package org.example;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class Main {
     static Scanner scanner = new Scanner(System.in);
     static ArrayList<Persona> Personas = new ArrayList<>();
@@ -10,7 +9,7 @@ public class Main {
         CapturarDatos(Personas);
         PromedioEdad(Personas);
         System.out.println("Total personas con genero Masculino = " +  PersonasPorGenero(Personas,"masculino"));
-        System.out.println("Total personas con genero Femenino = " + PersonasPorGenero(Personas,"femenino"));
+        System.out.println("Total personas con genero Femenino = "+ PersonasPorGenero(Personas,"femenino")+"\n" );
         System.out.println("La edad promedio es : " + PromedioEdad(Personas));
 
     }
@@ -27,12 +26,11 @@ public class Main {
             int edad = scanner.nextInt();
             scanner.nextLine();
             Personas.add(new Persona(nombre,apellido,genero,edad));
-
             i++;
         }
         for (int j = 0; j< Personas.size();j++){
             Persona p = Personas.get(j);
-            System.out.println("Nombre: " + p.getNombre() +  " Genero: "+ p.getGenero());
+            System.out.println("Nombre: "+ p.getNombre()+"\n"+"Genero: "+ p.getGenero()+"\n");
         }
         scanner.close();
     }
