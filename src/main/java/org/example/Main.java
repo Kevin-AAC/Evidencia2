@@ -7,7 +7,6 @@ public class Main {
 
     public static void main(String[] args) {
         CapturarDatos(Personas);
-        PromedioEdad(Personas);
         System.out.println("Total personas con genero Masculino = " +  PersonasPorGenero(Personas,"masculino"));
         System.out.println("Total personas con genero Femenino = "+ PersonasPorGenero(Personas,"femenino")+"\n" );
         System.out.println("La edad promedio es : " + PromedioEdad(Personas));
